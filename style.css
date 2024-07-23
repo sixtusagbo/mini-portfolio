@@ -1,24 +1,18 @@
-* {
-  box-sizing: border-box;
-}
-
+/* styles.css */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-header h1 {
+header {
+  text-align: center;
+  background-color: #f8f8f8;
   padding: 20px;
-  margin: 0;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
 }
 
 header img {
   width: 100%;
   height: auto;
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
 }
 
 .portfolio-grid {
@@ -30,13 +24,11 @@ header img {
 
 .portfolio-item {
   position: relative;
-  border-radius: 1rem;
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
 }
 
 .overlay {
@@ -50,7 +42,7 @@ header img {
   opacity: 0;
   transition: 0.5s ease;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .portfolio-item:hover .overlay {
@@ -65,4 +57,53 @@ header img {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
