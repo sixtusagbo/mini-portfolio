@@ -1,4 +1,3 @@
-/* styles.css */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -17,7 +16,6 @@ header img {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 20px;
 }
@@ -106,4 +104,23 @@ header img {
   color: #ccc;
   padding: 10px 0;
   height: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 599px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
